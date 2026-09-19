@@ -34,10 +34,13 @@
 }
 
 .hero h1 span {
-  background: linear-gradient(0.25turn, rgb(224, 87, 87),#00b3ff, #46642f, #94530e);
-  -webkit-background-clip: text; /* for Chrome, Safari */
-  -webkit-text-fill-color: transparent; /* make text show gradient */
-  background-clip: text; /* standard */
+  background: linear-gradient(0.25turn, rgb(224, 87, 87), #00b3ff, #46642f, #94530e);
+  -webkit-background-clip: text;
+  /* for Chrome, Safari */
+  -webkit-text-fill-color: transparent;
+  /* make text show gradient */
+  background-clip: text;
+  /* standard */
   color: transparent;
 }
 
@@ -61,7 +64,7 @@
 }
 
 .hero-connect,
-.hero-resume a{
+.hero-resume a {
   background: #007bff;
   color: #fff;
   padding: 12px 26px;
@@ -87,7 +90,8 @@
   /* background: #000; */
   transform: translateY(-2px);
 }
-.anchore-link{
+
+.anchore-link {
 
   text-decoration: none;
 }
@@ -97,6 +101,7 @@
   .hero h1 {
     font-size: 2rem;
   }
+
   .hero p {
     font-size: 1rem;
   }
@@ -107,12 +112,15 @@
     width: 150px;
     height: 150px;
   }
+
   .hero h1 {
     font-size: 1.6rem;
   }
+
   .hero p {
     font-size: 0.9rem;
   }
+
   .hero-connect,
   .hero-resume {
     padding: 10px 18px;
