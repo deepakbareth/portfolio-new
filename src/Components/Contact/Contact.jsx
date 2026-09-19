@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
+import { Mail, Phone, MapPin, User, MessageSquare, Send, ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
   const [inputValues, setInputValue] = useState({ name: "", email: "", message: "" });
@@ -83,37 +84,29 @@ const Contact = () => {
                 
                 <a href="mailto:deepakbareth7735@gmail.com" className="contact-method-card">
                   <div className="contact-method-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
+                    <Mail size={20} />
                   </div>
                   <div className="contact-method-text">
                     <span className="method-label">Email Me</span>
                     <strong className="method-val">deepakbareth7735@gmail.com</strong>
                   </div>
-                  <span className="method-arrow">→</span>
+                  <ArrowRight size={18} className="method-arrow" />
                 </a>
 
                 <a href="tel:+918000678983" className="contact-method-card">
                   <div className="contact-method-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
+                    <Phone size={20} />
                   </div>
                   <div className="contact-method-text">
                     <span className="method-label">Call / WhatsApp</span>
                     <strong className="method-val">+91 80006 78983</strong>
                   </div>
-                  <span className="method-arrow">→</span>
+                  <ArrowRight size={18} className="method-arrow" />
                 </a>
 
                 <div className="contact-method-card">
                   <div className="contact-method-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
+                    <MapPin size={20} />
                   </div>
                   <div className="contact-method-text">
                     <span className="method-label">Location</span>
@@ -136,10 +129,7 @@ const Contact = () => {
                 <div className="form-group">
                   <label htmlFor="name">Your Name</label>
                   <div className="form-input-wrap">
-                    <svg className="form-field-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
+                    <User size={18} className="form-field-icon" />
                     <input 
                       id="name"
                       name="name" 
@@ -155,10 +145,7 @@ const Contact = () => {
                 <div className="form-group">
                   <label htmlFor="email">Your Email</label>
                   <div className="form-input-wrap">
-                    <svg className="form-field-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
+                    <Mail size={18} className="form-field-icon" />
                     <input 
                       id="email"
                       name="email" 
@@ -174,9 +161,7 @@ const Contact = () => {
                 <div className="form-group">
                   <label htmlFor="message">Your Message</label>
                   <div className="form-input-wrap textarea-wrap">
-                    <svg className="form-field-icon textarea-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
+                    <MessageSquare size={18} className="form-field-icon textarea-icon" />
                     <textarea 
                       id="message"
                       name="message" 
@@ -199,23 +184,22 @@ const Contact = () => {
                   ) : (
                     <>
                       <span>Send Message</span>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                      </svg>
+                      <Send size={18} />
                     </>
                   )}
                 </button>
 
                 {submitStatus === 'success' && (
                   <div className="form-alert success">
-                    ✓ Message sent successfully! I will get back to you shortly.
+                    <CheckCircle2 size={18} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
+                    Message sent successfully! I will get back to you shortly.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
                   <div className="form-alert error">
-                    ✕ Something went wrong. Please try again or email me directly.
+                    <AlertCircle size={18} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />
+                    Something went wrong. Please try again or email me directly.
                   </div>
                 )}
 

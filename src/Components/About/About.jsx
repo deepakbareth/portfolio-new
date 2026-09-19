@@ -2,6 +2,7 @@ import React from 'react';
 import './About.css';
 import profile_img from '../../assets/profile1.jpg';
 import theme_pattern from '../../assets/theme_pattern.svg';
+import { MapPin, Briefcase, Sparkles, Layers, Cpu, Award } from 'lucide-react';
 
 const About = () => {
   const skills = [
@@ -17,18 +18,20 @@ const About = () => {
     {
       number: "10+",
       title: "Projects Built",
-      desc: "Interactive web apps, clones, and responsive UI designs"
+      desc: "Interactive web apps, clones, and responsive UI designs",
+      icon: <Layers size={22} className="highlight-card-icon" />
     },
-
     {
       number: "5+",
       title: "Core Technologies",
-      desc: "React, Next.js, JavaScript, Tailwind, and front-end tooling"
+      desc: "React, Next.js, JavaScript, Tailwind, and front-end tooling",
+      icon: <Cpu size={22} className="highlight-card-icon" />
     },
     {
       number: "100%",
       title: "Dedication",
-      desc: "Committed to clean code, responsive layouts & continuous learning"
+      desc: "Committed to clean code, responsive layouts & continuous learning",
+      icon: <Award size={22} className="highlight-card-icon" />
     }
   ];
 
@@ -74,21 +77,27 @@ const About = () => {
               {/* Quick Info Bar */}
               <div className="about-quick-info">
                 <div className="quick-info-item">
-                  <span className="info-icon">📍</span>
+                  <div className="info-icon-wrap">
+                    <MapPin size={17} className="info-lucide-icon" />
+                  </div>
                   <div>
                     <span className="info-label">Location</span>
                     <p className="info-val">Delhi NCR, India</p>
                   </div>
                 </div>
                 <div className="quick-info-item">
-                  <span className="info-icon">💼</span>
+                  <div className="info-icon-wrap">
+                    <Briefcase size={17} className="info-lucide-icon" />
+                  </div>
                   <div>
                     <span className="info-label">Role</span>
                     <p className="info-val">Frontend Developer</p>
                   </div>
                 </div>
                 <div className="quick-info-item">
-                  <span className="info-icon">⚡</span>
+                  <div className="info-icon-wrap">
+                    <Sparkles size={17} className="info-lucide-icon" />
+                  </div>
                   <div>
                     <span className="info-label">Focus</span>
                     <p className="info-val">React & Modern UI</p>
@@ -155,6 +164,9 @@ const About = () => {
         <div className="about-highlights-grid">
           {highlights.map((item, index) => (
             <div key={index} className="highlight-card">
+              <div className="highlight-icon-wrapper">
+                {item.icon}
+              </div>
               <div className="highlight-number-wrap">
                 <span className="highlight-number">{item.number}</span>
               </div>

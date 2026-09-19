@@ -1,6 +1,7 @@
 import React from 'react';
 import './Services.css';
 import theme_pattern from '../assets/theme_pattern.svg';
+import { Code2, Zap, Palette, Check, ArrowRight } from 'lucide-react';
 
 const servicesData = [
   {
@@ -12,12 +13,7 @@ const servicesData = [
       "Cross-Browser Compatibility",
       "Fast Performance & SEO Friendly"
     ],
-    icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
-      </svg>
-    )
+    icon: <Code2 size={26} />
   },
   {
     id: "02",
@@ -28,11 +24,7 @@ const servicesData = [
       "Dynamic Routing & State Management",
       "RESTful API Integration"
     ],
-    icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-      </svg>
-    )
+    icon: <Zap size={26} />
   },
   {
     id: "03",
@@ -43,14 +35,7 @@ const servicesData = [
       "Tailwind CSS & Modern Styling",
       "Smooth Micro-Animations & Hover Effects"
     ],
-    icon: (
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-        <path d="M2 2l7.586 7.586"></path>
-        <circle cx="11" cy="11" r="2"></circle>
-      </svg>
-    )
+    icon: <Palette size={26} />
   }
 ];
 
@@ -88,7 +73,9 @@ const Services = () => {
               <ul className="service-features">
                 {service.features.map((item, fIdx) => (
                   <li key={fIdx} className="service-feature-item">
-                    <span className="feature-check">✓</span>
+                    <span className="feature-check">
+                      <Check size={12} strokeWidth={3} />
+                    </span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -97,10 +84,7 @@ const Services = () => {
               <div className="service-footer">
                 <a href="#contact" className="service-cta">
                   <span>Discuss Project</span>
-                  <svg className="service-cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
+                  <ArrowRight size={18} className="service-cta-arrow" />
                 </a>
               </div>
             </div>

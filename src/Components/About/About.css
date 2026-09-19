@@ -225,11 +225,22 @@
 .quick-info-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
-.info-icon {
-  font-size: 1.15rem;
+.info-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(0, 114, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-lucide-icon {
+  color: #0072ff;
 }
 
 .info-label {
@@ -449,6 +460,26 @@
 
 .highlight-card:hover::before {
   opacity: 1;
+}
+
+.highlight-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 114, 255, 0.08);
+  color: #0072ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: all 0.35s ease;
+}
+
+.highlight-card:hover .highlight-icon-wrapper {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  color: #ffffff;
+  transform: scale(1.1) rotate(6deg);
+  box-shadow: 0 8px 18px rgba(0, 114, 255, 0.3);
 }
 
 .highlight-number-wrap {

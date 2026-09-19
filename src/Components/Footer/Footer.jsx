@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Footer.css';
 import logo from '../../assets/logo.jpeg';
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Mail, ArrowUp, Check } from 'lucide-react';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -15,6 +16,8 @@ const Footer = () => {
       setTimeout(() => setSubscribed(false), 4000);
     }
   };
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className='footer'>
@@ -67,10 +70,7 @@ const Footer = () => {
                 className="footer-social-icon"
                 aria-label="Send Email"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
+                <Mail size={18} />
               </a>
             </div>
           </div>
@@ -108,10 +108,7 @@ const Footer = () => {
             
             <form onSubmit={handleSubscribe} className="footer-subscribe-box">
               <div className="footer-input-wrap">
-                <svg className="footer-input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
+                <Mail size={16} className="footer-input-icon" />
                 <input 
                   type="email" 
                   placeholder='Enter your email'
@@ -127,7 +124,8 @@ const Footer = () => {
 
             {subscribed && (
               <p className="footer-subscribe-success">
-                ✓ Thank you for subscribing!
+                <Check size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'middle' }} />
+                Thank you for subscribing!
               </p>
             )}
           </div>
@@ -140,7 +138,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="footer-bottom-bar">
           <p className="footer-copy">
-            © {new Date().getFullYear()} <strong>Deepak Bareth</strong>. All rights reserved.
+            © {currentYear} <strong>Deepak Bareth</strong>. All rights reserved.
           </p>
 
           <p className="footer-credit">
@@ -149,9 +147,7 @@ const Footer = () => {
 
           <AnchorLink href="#home" className="footer-back-to-top">
             <span>Back to top</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="18 15 12 9 6 15"></polyline>
-            </svg>
+            <ArrowUp size={15} />
           </AnchorLink>
         </div>
 

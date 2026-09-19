@@ -2,6 +2,7 @@ import "./Navbar.css"
 import logo from '../../assets/logo.jpeg'
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useState } from "react";
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -26,18 +27,7 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
-                {menuOpen ? (
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                ) : (
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                )}
+                {menuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
         </nav>
     )

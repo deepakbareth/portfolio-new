@@ -1,7 +1,7 @@
-import './MyWork.css'
-import theme_pattern from '../../assets/theme_pattern.svg'
-import mywork_data from '../../assets/mywork_data'
-import arrow_icon from '../../assets/arrow_icon.svg'
+import './MyWork.css';
+import theme_pattern from '../../assets/theme_pattern.svg';
+import mywork_data from '../../assets/mywork_data';
+import { ExternalLink, ArrowUpRight } from 'lucide-react';
 
 const MyWork = () => {
   return (
@@ -19,7 +19,8 @@ const MyWork = () => {
         {work.w_link && (
           <div className="project-overlay">
             <a href={work.w_link} target="_blank" rel="noopener noreferrer" className="project-overlay-link">
-              View Site
+              <span>View Site</span>
+              <ExternalLink size={16} style={{ display: 'inline', marginLeft: '6px', verticalAlign: 'middle' }} />
             </a>
           </div>
         )}
@@ -28,7 +29,8 @@ const MyWork = () => {
         <h3>{work.w_name}</h3>
         {work.w_link && (
           <a href={work.w_link} target="_blank" rel="noopener noreferrer" className="project-visit-btn">
-            Visit Project <span>&#8594;</span>
+            <span>Visit Project</span>
+            <ArrowUpRight size={18} style={{ display: 'inline', marginLeft: '4px', verticalAlign: 'middle' }} />
           </a>
         )}
       </div>
