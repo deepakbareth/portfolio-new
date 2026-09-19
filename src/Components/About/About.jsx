@@ -77,7 +77,7 @@ const About = () => {
                   <span className="info-icon">📍</span>
                   <div>
                     <span className="info-label">Location</span>
-                    <p className="info-val">India</p>
+                    <p className="info-val">Delhi NCR, India</p>
                   </div>
                 </div>
                 <div className="quick-info-item">
