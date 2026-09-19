@@ -15,8 +15,18 @@ const MyWork = () => {
   mywork_data.map((work,idx)=>(
     <div className='projects' key={idx}>
       <h3>{work.w_name}</h3>
-      <img src={work.w_img} alt="" />
-
+      {work.w_link ? (
+        <>
+          <a href={work.w_link} target="_blank" rel="noopener noreferrer">
+            <img src={work.w_img} alt="" />
+          </a>
+          <a href={work.w_link} target="_blank" rel="noopener noreferrer" style={{marginTop: '10px', color: '#007bff', textDecoration: 'none', fontWeight: 'bold'}}>
+            Visit Project
+          </a>
+        </>
+      ) : (
+        <img src={work.w_img} alt="" />
+      )}
     </div>
   ))
 }
