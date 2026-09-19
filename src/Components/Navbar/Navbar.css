@@ -21,18 +21,19 @@ body{
     border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
-.navbar img {
-    width: 55px;
-    height: 55px;
+.nav-logo {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+    display: block;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.navbar img:hover {
-    transform: scale(1.1) rotate(5deg);
+.nav-logo:hover {
+    transform: scale(1.08) rotate(4deg);
 }
 
 .nav-menu {
@@ -147,23 +148,38 @@ body{
     
     /* Mobile menu button */
     .menu-btn {
-        display: block;
-        background: none;
-        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        color: #0f172a;
         cursor: pointer;
-        padding: 0.5rem;
+        padding: 0;
         z-index: 1001;
-        transition: transform 0.3s ease;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .menu-btn:hover {
+        background: #ffffff;
+        color: #0072ff;
+        border-color: #0072ff;
+        box-shadow: 0 4px 12px rgba(0, 114, 255, 0.15);
+        transform: scale(1.04);
     }
 
     .menu-btn:active {
-        transform: scale(0.9);
+        transform: scale(0.95);
     }
-    
-    .menu-btn img {
-        width: 32px;
-        height: 32px;
-        filter: brightness(0); /* Make icon black for light theme */
+
+    .menu-btn.open {
+        background: #fee2e2;
+        color: #ef4444;
+        border-color: #fca5a5;
     }
 }
 
